@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Amelie Hilde Mackeprang</title>
+    <meta
+      name="description"
+      content="Eine romantische mobile Website mit Briefpapier-Look, Herzbaum-Animation und Erinnerungen."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Quicksand:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <section class="view view--active intro-view" data-view="intro" aria-label="Startseite">
+        <div class="paper-card intro-card">
+          <p class="eyebrow intro-sequence intro-sequence--1">
+            <!-- AUSTAUSCHBAR: Kleine obere Zeile auf der Startseite -->
+            Für meine Liebe Amelie &#10084;
+          </p>
+          <h1 class="intro-title intro-sequence intro-sequence--2">
+            <!-- AUSTAUSCHBAR: Startseiten-Titel -->
+            Ein Geschenk von Atta
+          </h1>
+          <p class="intro-copy intro-sequence intro-sequence--3">
+            <!-- AUSTAUSCHBAR: Kleiner Untertitel auf der Startseite -->
+            Nur ein kleine Geste um dir zu zeigen, wie sehr ich dich lieb habe
+          </p>
+
+          <div class="intro-actions intro-sequence intro-sequence--4">
+            <button class="button button--primary js-open-gift" type="button" disabled>öffnen</button>
+            <button class="button button--ghost js-not-open" type="button" disabled>nicht öffnen</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="view tree-view" data-view="letter" aria-label="Herzbaum Animation">
+        <div class="tree-demo-card">
+          <div class="tree-demo-stage js-tree-stage">
+            <div class="tree-reference">
+              <div class="tree-reference__text">
+                <div class="tree-reference__code js-ref-code">
+                  <!-- AUSTAUSCHBAR: Oberer Brieftext auf Seite 2 -->
+                  <span class="say">Meine liebste Amelie,</span><br /><br />
+                  <span class="say">Jedes Mal, wenn ich deinen Duft wahrnehme,
+                                    erinnert er mich an die wundervollen Momente, die wir bereits gemeinsam erlebt haben.</span><br /><br />
+                  <span class="say">Gleichzeitig lässt er mich auf viele weitere gemeinsame Momente hoffen.</span><br /><br />
+                  <span class="say"><span class="space"></span> - Ich liebe dich</span>
+                </div>
+              </div>
+
+              <canvas
+                class="tree-reference__canvas js-tree-canvas"
+                width="1100"
+                height="680"
+                aria-label="Animierter Herzbaum"
+              ></canvas>
+            </div>
+          </div>
+
+          <div class="swipe-hint swipe-hint--scene">
+            <span>Nach oben wischen für das Geschenk</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="view gift-view" data-view="gift" aria-label="Geschenkseite">
+        <div class="gift-background"></div>
+
+        <div class="gift-layout">
+          <div class="gift-message paper-card reveal-block js-reveal-message">
+            <p
+              class="gift-sentence js-gift-text"
+              data-text="Ein Vergissmeinnicht für all die kleinen Momente mit dir "
+            ></p>
+            <p class="gift-arrow js-gift-arrow" aria-hidden="true">↓</p>
+          </div>
+
+          <div class="flower-card flower-card--intro reveal-block js-reveal-flower" aria-hidden="true">
+            <img
+              class="flower-illustration"
+              src="/images/flower-page-3.png"
+              alt=""
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+
+          <div class="slideshow-card paper-card reveal-block js-reveal-slideshow">
+            <div class="slideshow-header">
+              <p class="eyebrow">Our Memories in photographs</p>
+              <p class="slide-counter js-slide-counter">1 / 6</p>
+            </div>
+
+            <div class="slideshow js-slideshow" aria-label="Bildergalerie">
+              <div class="slides">
+                <article class="slide is-active">
+                  <img src="/images/bild1.jpeg" alt="Erinnerungsbild 1" data-fallback-label="Bild 1" />
+                </article>
+                <article class="slide">
+                  <img src="/images/bild2.jpeg" alt="Erinnerungsbild 2" data-fallback-label="Bild 2" />
+                </article>
+                <article class="slide">
+                  <img src="/images/bild3.jpeg" alt="Erinnerungsbild 3" data-fallback-label="Bild 3" />
+                </article>
+                <article class="slide">
+                  <img src="/images/bild4.jpeg" alt="Erinnerungsbild 4" data-fallback-label="Bild 4" />
+                </article>
+                <article class="slide">
+                  <img src="/images/bild5.jpeg" alt="Erinnerungsbild 5" data-fallback-label="Bild 5" />
+                </article>
+                <article class="slide">
+                  <img src="/images/bild6.jpeg" alt="Erinnerungsbild 6" data-fallback-label="Bild 6" />
+                </article>
+              </div>
+            </div>
+
+            <p class="slideshow-note js-slideshow-note">Du kannst jetzt durch die Bilder swipen.</p>
+          </div>
+        </div>
+
+        <audio class="js-audio" preload="auto" playsinline>
+          <!-- AUSTAUSCHBAR: Musikdatei -->
+          <source src="/music/song.mp3" type="audio/mpeg" />
+        </audio>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
